@@ -228,11 +228,10 @@ a:visited {
   max-width: var(--popup-max-width);
   left: var(--popup-left-position);
   top: var(--popup-top-position);
-  -webkit-transform: translate3D(-50%, -50%, 0);
-          transform: translate3D(-50%, -50%, 0);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   pointer-events: none;
   opacity: 0;
-  will-change: opacity;
   -webkit-transition-property: opacity;
   transition-property: opacity;
   -webkit-transition-duration: 0.6s;
