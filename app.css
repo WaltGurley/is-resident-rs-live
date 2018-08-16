@@ -253,7 +253,9 @@ a:visited {
 /* Area of matrix popup containing primary image and secondary images */
 .popup-img-area {
   padding: var(--popup-img-inner-padding);
-  place-self: var(--center-position);
+  justify-self: var(--center-position);
+  -ms-flex-item-align: var(--center-position);
+      align-self: var(--center-position);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,7 +309,9 @@ a:visited {
 /* Area of matrix popup containing item title, story, and URL */
 .popup-txt-area {
   padding: var(--popup-txt-inner-padding);
-  place-self: var(--center-position);
+  -ms-flex-item-align: var(--center-position);
+      align-self: var(--center-position);
+  justify-self: var(--center-position);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: var(--popup-txt-area-width);
@@ -709,12 +713,11 @@ a:visited {
 /******************** For laptop ********************/
 /**********************************************************************/
 @media (max-width: 1024px) and (max-height: 2099px) {
-  :root {
-    /* body and .main-container properties */
-    /* .main-txt properties */
-    /* .matrix properties */
-    /* .popup properties */
-    /* .imm-sch-url-container properties */ } }
+  /* body and .main-container properties */
+  /* .main-txt properties */
+  /* .matrix properties */
+  /* .popup properties */
+  /* .imm-sch-url-container properties */ }
 
 /**********************************************************************/
 /******************** For tablet ********************/
@@ -772,20 +775,18 @@ a:visited {
 /******************** For medium mobile device ********************/
 /**********************************************************************/
 @media (max-width: 375px) and (max-height: 2099px) {
-  :root {
-    /* body and .main-container properties */
-    /* .main-txt properties */
-    /* .matrix properties */
-    /* .popup properties */
-    /* .imm-sch-url-container properties */ } }
+  /* body and .main-container properties */
+  /* .main-txt properties */
+  /* .matrix properties */
+  /* .popup properties */
+  /* .imm-sch-url-container properties */ }
 
 /**********************************************************************/
 /******************** For small mobile device ********************/
 /**********************************************************************/
 @media (max-width: 320px) and (max-height: 2099px) {
-  :root {
-    /* body and .main-container properties */
-    /* .main-txt properties */
-    /* .matrix properties */
-    /* .popup properties */
-    /* .imm-sch-url-container properties */ } }
+  /* body and .main-container properties */
+  /* .main-txt properties */
+  /* .matrix properties */
+  /* .popup properties */
+  /* .imm-sch-url-container properties */ }
