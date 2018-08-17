@@ -16,6 +16,7 @@
   --body-overflow: hidden;
   --background-color: #000000;
   --text-color: #FFFFFF;
+  --link-color: #CC0000;
   --outermost-padding: 100px;
   --main-container-display: grid;
   --main-container-grid-areas:
@@ -55,10 +56,10 @@
   --popup-width: 65%;
   --popup-height: 71.429vh;
   --popup-max-width: 3500px;
-  --popup-left-position: calc(43.75vw);
-  --popup-top-position: calc(43.5vh);
+  --popup-left-position: calc(var(--left-col-width) / 2);
+  --popup-top-position: calc(var(--top-row-height) / 2);
   --popup-bg-color: rgba(0, 0, 0, .8);
-  --popup-border: 10px solid rgba(255, 255, 255, 100);
+  --popup-border: 6px solid rgba(255, 255, 255, 100);
   --popup-border-radius: 25px;
   /* .popup properties - text */
   --popup-txt-inner-padding: 75px;
@@ -87,12 +88,11 @@
   /* .imm-sch-url-container properties */
   --imm-sch-url-bg-color: rgba(0, 0, 0, 0);
   --imm-sch-url-vertical-align: center;
-  --imm-sch-url-vertical-align-percentage: 65%;
+  --imm-sch-url-vertical-align-percentage: 62.5%;
   --imm-sch-url-padding: 0 0 0 0.5vw;
   --imm-sch-url-size: 24px;
   --imm-sch-url-display: inline;
   --logo-display: inline-block;
-  --logo-proportions: 10%;
   --max-logo-height: 110px;
   --logo-padding: 0 0 0 2.083vw;
   /* .outer-desc properties */
@@ -140,11 +140,12 @@ p {
 
 /* All links */
 a {
-  color: var(--text-color); }
+  text-decoration: none;
+  color: var(--link-color); }
 
 /* Keeps visited links the same color as unvisted links */
 a:visited {
-  color: var(--text-color); }
+  color: var(--link-color); }
 
 /**********************************************************************/
 /******************** Main text area ********************/
@@ -339,14 +340,12 @@ a:visited {
 
 /* Immersive Scholar logo */
 #logo {
-  height: var(--logo-proportions);
   max-height: var(--max-logo-height);
   display: var(--logo-display);
   padding: var(--logo-padding); }
 
 /* URL for the Immersive Scholar project that appears outside of .main-txt */
 .imm-sch-url {
-  max-width: var(--max-main-line-length);
   padding: var(--imm-sch-url-padding);
   font-size: var(--imm-sch-url-size);
   display: var(--imm-sch-url-display);
@@ -456,7 +455,6 @@ a:visited {
     --popup-width: 90%;
     --popup-height: 55vh;
     --popup-left-position: calc(50vw);
-    --popup-top-position: calc(30vh);
     /* .popup properties - text */
     --popup-heading-margin: 0px;
     --popup-title-size: 108px;
@@ -479,7 +477,15 @@ a:visited {
   .matrix {
     width: 100vw; }
   .main-desc {
-    margin: 0; } }
+    margin: 0; }
+  .imm-sch-url-container {
+    height: 10vh; }
+  #logo {
+    position: relative;
+    top: 2.5vh; }
+  .imm-sch-url {
+    position: relative;
+    top: 2.5vh; } }
 
 /* For a wider "portrait" layout - 4 x 3 matrix */
 /* (Aspect ratios between 5/7 and 1/1) */
@@ -514,8 +520,6 @@ a:visited {
     --popup-width: 90vw;
     --popup-max-width: 90vw;
     --popup-height: 40%;
-    --popup-left-position: calc(50vw);
-    --popup-top-position: calc(25vh);
     /* .popup properties - text */
     --popup-txt-inner-padding: 75px;
     --popup-title-size: 84px;
